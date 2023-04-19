@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/clockstyle.css">
+  <link rel="stylesheet" href="./css/animate.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+
+  <title>Document</title>
+
+</head>
+
+<body>
+  <!-- 晚上背景 -->
+  <div id="nightstart">
+    <div></div>
+  </div>
+
+  <!-- 白天背景 -->
+  <div id="whightsnow">
+    <img src="./images/Mountain.png" alt="">
+  </div>
+
+
+  <!-- 流星 -->
+  <div class="boxst stdis">
+    <div class="stratlight1
+  stan"><img src="./images/st4.png"></div>
+  </div>
+
+  <div class="boxst stdis">
+    <div class="stratlight1
+  stan"><img src="./images/st4.png"></div>
+  </div>
+  <div class="boxst stdis">
+    <div class="stratlight1
+  stan"><img src="./images/st4.png"></div>
+  </div>
+  <div class="boxst stdis">
+    <div class="stratlight1
+  stan"><img src="./images/st4.png"></div>
+  </div>
+  <div class="boxst stdis">
+    <div class="stratlight1
+  stan"><img src="./images/st4.png"></div>
+  </div>
+  <div class="boxst stdis">
+    <div class="stratlight1
+  stan"><img src="./images/st4.png"></div>
+  </div>
+
+
+
+
+
+  <div class="boxst1 stdis">
+    <div class="stratlight1
+  stan1"><img src="./images/st3.png"></div>
+  </div>
+
+  <div class="boxst1 stdis">
+    <div class="stratlight1
+  stan1"><img src="./images/st3.png"></div>
+  </div>
+
+  <div class="boxst1 stdis">
+    <div class="stratlight1
+  stan1"><img src="./images/st3.png"></div>
+  </div>
+
+  <div class="boxst1 stdis">
+    <div class="stratlight1
+  stan1"><img src="./images/st3.png"></div>
+  </div>
+
+  <div class="boxst1 stdis">
+    <div class="stratlight1
+  stan1"><img src="./images/st3.png"></div>
+  </div>
+
+  <div class="boxst1 stdis">
+    <div class="stratlight1
+  stan1"><img src="./images/st3.png"></div>
+  </div>
+
+  <div class="boxst1 stdis">
+    <div class="stratlight1
+  stan1"><img src="./images/st3.png"></div>
+  </div>
+
+
+
+  <!-- 城堡 -->
+  <div class="back">
+    <img
+      src="./images/kisspng-the-snow-queen-elsa-castle-drawing-fairy-tale-snow-castle-5a81e5de4a4f09.3273934415184624303044.png"
+      alt="">
+  </div>
+
+  <!-- 流星 -->
+
+  <div class="boxst2 stdis">
+    <div class="stratlight1
+  stan2"><img src="./images/st2.png"></div>
+  </div>
+
+  <div class="boxst2 stdis">
+    <div class="stratlight1
+  stan2"><img src="./images/st2.png"></div>
+  </div>
+
+  <div class="boxst2 stdis">
+    <div class="stratlight1
+  stan2"><img src="./images/st2.png"></div>
+  </div>
+
+  <!-- 時間木牌 -->
+  <div class="time_box1">
+    <div class="gg"><img src="./images/wood1.png"></div>
+    <div class="gg"><img src="./images/wood1.png"></div>
+    <div class="gg"><img src="./images/wood1.png"></div>
+  </div>
+
+  <div class="time_box2">
+
+    <div class="time backtime a1"> </div>
+    <div class="time test a1">小時</div>
+
+
+    <div class="time backtime a2"></div>
+    <div class="time test a2">幾分</div>
+
+
+
+    <div class="time backtime a3"></div>
+    <div class="time test  animate__animated animate__flipInX1 a3">幾秒</div>
+
+  </div>
+
+
+  <!-- 雪花 -->
+
+
+
+  <div class="fallendown contoe"></div>
+  <div class="fallendown contoe"></div>
+  <div class="fallendown contoe"></div>
+  <div class="fallendown contoe"></div>
+  <div class="fallendown contoe"></div>
+
+  <div class="fallendown cha contoe"></div>
+  <div class="fallendown cha contoe"></div>
+  <div class="fallendown cha contoe"></div>
+  <div class="fallendown cha contoe"></div>
+  <div class="fallendown cha contoe"></div>
+
+  <div class="fallendown2 contoe"></div>
+  <div class="fallendown2 contoe"></div>
+  <div class="fallendown2 contoe"></div>
+  <div class="fallendown2 contoe"></div>
+  <div class="fallendown2 contoe"></div>
+  <div class="fallendown2 contoe"></div>
+  <div class="fallendown2 contoe"></div>
+
+  <div class="fallendown3 contoe"></div>
+  <div class="fallendown3 contoe"></div>
+  <div class="fallendown3 contoe"></div>
+  <div class="fallendown3 contoe"></div>
+  <div class="fallendown3 contoe"></div>
+  <div class="fallendown3 contoe"></div>
+  <div class="fallendown3 contoe"></div>
+  <div class="fallendown3 contoe"></div>
+  <div class="fallendown3 contoe"></div>
+  <div class="fallendown3 contoe"></div>
+
+
+
+
+  <div id="clock">
+
+    <div id="hour"></div>
+    <div id="minute"></div>
+    <div id="second"></div>
+  </div>
+
+
+
+
+  <script>
+    const clockcontor = document.getElementById('clock')
+    const hour = document.getElementById('hour')
+    const minute = document.getElementById('minute')
+    const second = document.getElementById('second')
+    const test = document.getElementsByClassName('test')
+    const fallendown = document.getElementsByClassName('fallendown')
+
+    const fallendown2 = document.getElementsByClassName('fallendown2')
+
+    const fallendown3 = document.getElementsByClassName('fallendown3')
+
+    const cha = document.getElementsByClassName('cha')
+    const nightstart = document.getElementById('nightstart')
+    const whightsnow = document.getElementById('whightsnow')
+    const contoe = document.getElementsByClassName('contoe')
+
+    const boxst = document.getElementsByClassName('boxst')
+
+    const boxst1 = document.getElementsByClassName('boxst1')
+
+    const boxst2 = document.getElementsByClassName('boxst2')
+
+    const stdiss = document.getElementsByClassName(' stdis')
+
+
+    const clock = () => {
+      const date = new Date()
+      hour.style.transform = `rotate(${date.getHours() * 30 + 90}deg)`
+      minute.style.transform = `rotate(${date.getMinutes() * 6 + 90}deg)`
+      second.style.transform = `rotate(${date.getSeconds() * 6 + 90}deg)`
+      // 女巫秒針只在有月亮的部分顯示
+      if (date.getSeconds() > 16 && date.getSeconds() < 49) {
+        second.style.opacity = '0';
+      } else {
+        second.style.opacity = '1'
+      }
+    }
+
+    //當滑鼠移動到時鐘上，如果女巫秒針是隱藏，要顯示，當滑鼠移開，回復原本設定
+    clockcontor.addEventListener('mouseenter', event => {
+      timer = setInterval(function () {
+        second.style.opacity = '1'
+      }, 100)
+    })
+
+    clockcontor.addEventListener('mouseout', event => {
+      clearInterval(timer)
+    })
+
+
+
+    clock()
+    setInterval(clock, 1000)
+
+
+
+    //控制背景白天黑夜轉換
+    const backgroung = () => {
+      const date = new Date()
+
+      //16點切換
+      if (date.getHours() === 16) {
+        nightstart.style.opacity = `${date.getMinutes() * 1 / 60}`;
+        whightsnow.style.opacity = `${1 - date.getMinutes() * 1 / 60}`;
+        //17~23，0~7
+      } else if (date.getHours() > 16 || date.getHours() < 8) {
+        nightstart.style.opacity = '1';
+        whightsnow.style.opacity = '0';
+      }
+
+
+      //8點切換
+      if (date.getHours() === 8) {
+        whightsnow.style.opacity = `${date.getMinutes() * 1 / 60}`
+        nightstart.style.opacity = `${1 - date.getMinutes() * 1 / 60}`
+        //  9~15
+      } else if (date.getHours() > 8 && date.getHours() < 16) {
+        nightstart.style.opacity = '0';
+        whightsnow.style.opacity = '1';
+      }
+
+    }
+
+
+    //時鐘文字
+    const vue = () => {
+      const date = new Date()
+
+      document.getElementsByClassName(`time`)[1].innerText = date.getHours().toString().padStart(2, '0')
+      document.getElementsByClassName(`time`)[3].innerText = date.getMinutes().toString().padStart(2, '0')
+
+
+      setTimeout(() => {
+        document.getElementsByClassName(`time`)[5].innerText = date.getSeconds().toString().padStart(2, '0')
+      }, 50)
+
+
+      if (date.getHours() !== 0) {
+        document.getElementsByClassName(`time`)[0].innerText = (date.getHours() - 1).toString().padStart(2, '0')
+      } else { document.getElementsByClassName(`time`)[0].innerText = '23' }
+
+
+      if (date.getMinutes() !== 0) {
+        document.getElementsByClassName(`time`)[2].innerText = (date.getMinutes() - 1).toString().padStart(2, '0')
+      } else { document.getElementsByClassName(`time`)[2].innerText = '59' }
+
+
+      setTimeout(() => {
+        if (date.getSeconds() !== 0) {
+          document.getElementsByClassName(`time`)[4].innerText = (date.getSeconds()).toString().padStart(2, '0')
+        } else { document.getElementsByClassName(`time`)[4].innerText = '59' }
+      }, 400)
+
+    }
+
+
+    //時鐘翻頁
+    const timeConnie = () => {
+      const date = new Date()
+
+      if (date.getSeconds() === 0) {
+        test[1].classList.add("animate__flipInX2")
+      }
+      else if (date.getSeconds() > 4) { test[1].classList.remove("animate__flipInX2") }
+
+
+      if (date.getMinutes() === 0 && date.getSeconds() === 0) {
+        test[0].classList.add("animate__flipInX2")
+      }
+      else if (date.getSeconds() > 4) { test[0].classList.remove("animate__flipInX2") }
+      vue()
+      backgroung()
+    }
+    timeConnie()
+    setInterval(timeConnie, 1000)
+
+
+    //雪花隨機
+
+    const snow1 = () => {
+
+      for (let i = 0; i < 5; i++) {
+
+        fallendown[i].style.top = Math.round(Math.random() * 100 - 50) + '%'
+        fallendown[i].style.left = Math.round(Math.random() * 100) + '%'
+
+      }
+
+    }
+
+    snow1()
+    setInterval(snow1, 6000)
+
+
+    const snow2 = () => {
+
+
+
+      for (let i = 0; i < 7; i++) {
+        fallendown2[i].style.top = Math.round(Math.random() * 150 - 50) + '%'
+        fallendown2[i].style.left = Math.round(Math.random() * 100) + '%'
+      }
+
+
+
+    }
+
+
+    snow2()
+    setInterval(snow2, 10000)
+
+    const snow3 = () => {
+
+
+
+      for (let i = 0; i < 10; i++) {
+        fallendown3[i].style.top = Math.round(Math.random() * 150 - 50) + '%'
+        fallendown3[i].style.left = Math.round(Math.random() * 100) + '%'
+      }
+
+
+    }
+    snow3()
+    setInterval(snow3, 23000)
+
+
+
+    const snow4 = () => {
+
+      for (let i = 0; i < 5; i++) {
+
+        cha[i].style.top = Math.round(Math.random() * 100 - 50) + '%'
+        cha[i].style.left = Math.round(Math.random() * 100) + '%'
+
+      }
+
+    }
+
+    snow4()
+    setInterval(snow4, 14000)
+
+
+
+
+    // 控制雪花晚上消失
+    const contoes = () => {
+
+      const date = new Date()
+
+
+      for (let i = 0; i < 27; i++) {
+
+        //9 ~ 16
+        if (date.getHours() < 17 && date.getHours() > 8) {
+          contoe[i].style.display = 'block'
+        } else { contoe[i].style.display = 'none' }
+      }
+    }
+
+    contoes()
+    setInterval(contoes, 1000)
+
+    // 流星隨機
+
+    const boxstcon = () => {
+
+      for (let i = 0; i < 6; i++) {
+        boxst[i].style.left = Math.round(Math.random() * 100) + '%'
+        boxst[i].style.top = Math.round(Math.random() * 110 - 25) + '%'
+
+      }
+
+    }
+
+    boxstcon()
+    setInterval(boxstcon, 9000)
+
+
+
+    const boxstcon1 = () => {
+
+      for (let i = 0; i < 7; i++) {
+        boxst1[i].style.left = Math.round(Math.random() * 100) + '%'
+        boxst1[i].style.top = Math.round(Math.random() * 110 - 25) + '%'
+
+      }
+
+    }
+
+    boxstcon1()
+    setInterval(boxstcon1, 7000)
+
+
+    const boxstcon2 = () => {
+
+      for (let i = 0; i < 3; i++) {
+        boxst2[i].style.left = Math.round(Math.random() * 100) + '%'
+        boxst2[i].style.top = Math.round(Math.random() * 110 - 25) + '%'
+
+      }
+
+    }
+
+
+    boxstcon2()
+    setInterval(boxstcon2, 2000)
+
+
+    //控制流星白天消失
+    const stdisss = () => {
+
+      const date = new Date()
+
+
+      for (let i = 0; i < 16; i++) {
+
+        //17~23，0~8
+        if (date.getHours() < 9 || date.getHours() > 16) {
+          stdiss[i].style.display = 'block'
+        } else { stdiss[i].style.display = 'none' }
+      }
+    }
+
+    stdisss()
+    setInterval(stdisss, 1000)
+  </script>
+</body>
+
+</html>

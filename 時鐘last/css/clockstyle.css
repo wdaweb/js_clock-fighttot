@@ -1,0 +1,699 @@
+body {
+  overflow: hidden;
+}
+
+
+.back {
+  position: relative;
+  float: left;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+
+.back img {
+  width: 100%;
+  height: 100%;
+  /* 凱富老師幫加，城堡不變形 */
+  object-fit: cover;
+  vertical-align: middle;
+
+}
+
+/* 晚上背景 */
+#nightstart {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  content: '';
+  background-image: url(../images/456.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+
+}
+
+#nightstart div {
+  height: 100%;
+  width: 100%;
+  background: url(../images/day.png);
+  opacity: 0.5;
+}
+
+/* 白天背景 */
+#whightsnow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: -1;
+  background: url(../images/Earth.png);
+  background-size: cover;
+
+}
+
+#whightsnow::after {
+  content: '';
+  background: url(../images/day.png);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.5;
+}
+
+#whightsnow img {
+  width: 88%;
+  height: 88%;
+  left: 19%;
+  top: 5%;
+  position: absolute;
+}
+
+
+/* 錶盤樣式 */
+
+#clock {
+
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  right: 100px;
+  bottom: 280px;
+  transition: 2s;
+}
+
+
+
+#clock::before {
+  content: '';
+  width: 250px;
+  height: 250px;
+  background: url(../images/ClockNewYear.png);
+  background-size: contain;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 2s;
+}
+
+#clock::after {
+  content: '';
+  width: 266px;
+  height: 266px;
+  background: url(../images/moon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(30deg);
+  position: absolute;
+  left: -12px;
+  top: -5px;
+  transition: 2s;
+}
+
+#clock:hover {
+  opacity: 1;
+  scale: 1.5;
+}
+
+#clock:hover::before {
+  opacity: 1;
+
+}
+
+
+
+#clock:hover::after {
+  opacity: 0;
+}
+
+
+
+/* 時針 */
+
+#hour {
+  width: 30%;
+  height: 30px;
+  background: url(../images/hours2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: 59px;
+  border-radius: 5px;
+  transform-origin: 89.7% 42.4%;
+}
+
+/* 分針 */
+#minute {
+  width: 40%;
+  height: 20px;
+  background: url(../images/min1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 33px;
+  border-radius: 5px;
+  transform-origin: 93.6% 37.3%;
+
+}
+
+
+/* 秒針 */
+#second {
+  width: 60%;
+  height: 40px;
+  background: url(../images/witch.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: calc(50% - 20px);
+  left: -10%;
+  border-radius: 5px;
+  transform-origin: right center;
+}
+
+
+
+
+/* 鎖鏈 */
+
+.time_box1 {
+  position: absolute;
+  margin-left: 10px;
+
+}
+
+/* 翻頁盒子 */
+.time_box2 {
+  position: absolute;
+  margin-left: 10px;
+  top: 86.96px;
+  font-family: 'Rye', cursive;
+  color: white;
+  text-shadow: 5px 5px 5px rgb(0, 56, 211);
+  font-size: 2rem;
+
+
+}
+
+.time::after {
+  content: '';
+  width: 160px;
+  height: 60px;
+  border-radius: 20px 20px 0 0;
+  background: url(../images/Snowflake.png);
+  background-size: contain;
+  position: absolute;
+  left: 0;
+  top: -15px;
+}
+
+
+.time::before {
+  content: '';
+  width: 160px;
+  height: 60px;
+  border-radius: 20px 20px 0 0;
+  background: url(../images/Ice\ Cube.png);
+  background-size: contain;
+  position: absolute;
+  left: 0;
+  top: -15px;
+  opacity: 0.5;
+}
+
+
+
+
+
+.time_box2 div {
+  width: 160px;
+  height: 60px;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 60px;
+
+}
+
+/* 鎖鏈 */
+.gg {
+  width: 160px;
+  display: inline-block;
+
+
+}
+
+.gg img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+/* 翻牌 */
+
+.test {
+  float: left;
+  position: absolute;
+  border-radius: 0 0 10px 10px;
+  background: url(../images/wood2.png);
+  box-shadow: 2px 2px 2px black;
+  transform-origin: center 0px;
+
+}
+
+/* 翻牌背景 */
+
+.backtime {
+
+  float: left;
+  position: absolute;
+  border-radius: 0 0 10px 10px;
+  background: url(../images/wood2.png);
+  box-shadow: 2px 2px 2px black;
+  transform-origin: center 0px;
+
+
+}
+
+/* 翻頁距離 */
+.a2 {
+  left: 165px;
+}
+
+
+.a3 {
+  left: 330px;
+
+}
+
+/* 雪花盒子 */
+
+.fallendown {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: url(../images/floow1.png);
+  background-size: contain;
+  animation-name: fallendown;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+}
+
+.cha {
+  background: url(../images/flow2.png);
+  background-size: contain;
+  animation-duration: 14s;
+  animation-name: fcha;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+.fallendown2 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: url(../images/floow1.png);
+  background-size: contain;
+  animation-name: fallendown;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.fallendown3 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: url(../images/flow2.png);
+  background-size: contain;
+  animation-name: fallendown2;
+  animation-duration: 23s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* 雪花動畫 */
+
+
+
+@keyframes fallendown {
+  0% {
+    transform: rotate(0deg);
+    margin-top: 0px;
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.2;
+  }
+
+  35% {
+    opacity: 0.5;
+  }
+
+  60% {
+    opacity: 0.5;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    margin-top: 150vh;
+    opacity: 0;
+  }
+}
+
+
+@keyframes fcha {
+  0% {
+    transform: rotate(0deg);
+    margin-top: 0px;
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    margin-top: 100vh;
+    opacity: 0;
+  }
+}
+
+
+
+@keyframes fallendown2 {
+  0% {
+    transform: rotate(0deg);
+    margin-top: 0px;
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    margin-top: 100vh;
+    opacity: 0;
+  }
+}
+
+
+/* 翻頁動畫 */
+
+.animate__flipInX1 {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInX1;
+  animation-name: flipInX1;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+
+.animate__flipInX2 {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInX2;
+  animation-name: flipInX2;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+}
+
+/* 翻頁動畫 */
+
+@keyframes flipInX1 {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 200deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+
+
+@keyframes flipInX2 {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 270deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+
+/* 流星 */
+.stratlight1 {
+  position: absolute;
+  width: 15px;
+  height: 300px;
+  transform: rotate(45deg);
+}
+
+
+.stratlight1 img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 流星盒子 */
+.boxst {
+  position: absolute;
+  left: 1000px;
+  width: 600px;
+  height: 600px;
+  z-index: -1;
+}
+
+
+.boxst1 {
+  position: absolute;
+  left: 1000px;
+  width: 600px;
+  height: 600px;
+  z-index: -1;
+}
+
+
+.boxst2 {
+  position: absolute;
+  left: 600px;
+  top: 0%;
+  width: 600px;
+  height: 600px;
+  z-index: -1;
+}
+
+
+
+
+/* 流星動畫 */
+
+.stan {
+  animation-name: stan;
+  animation-iteration-count: infinite;
+  animation-duration: 9s;
+
+}
+
+
+.stan1 {
+  animation-name: stan1;
+  animation-iteration-count: infinite;
+  animation-duration: 7s;
+
+}
+
+
+
+.stan2 {
+  animation-name: stan2;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+
+}
+
+
+@keyframes stan {
+
+  0% {
+    left: 600px;
+    top: -600px;
+
+    opacity: 0;
+  }
+
+
+  84% {
+    left: 600px;
+    top: -600px;
+    height: 300px;
+    opacity: 0;
+  }
+
+  90.5% {
+    opacity: 0.7;
+  }
+
+  98% {
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+
+  }
+
+
+  100% {
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    height: 0px;
+  }
+
+}
+
+
+
+@keyframes stan1 {
+  0% {
+    left: 600px;
+    top: -600px;
+    opacity: 0;
+  }
+
+
+  60% {
+    left: 600px;
+    top: -600px;
+    height: 300px;
+    opacity: 0;
+  }
+
+  66.5% {
+    opacity: 0.7;
+  }
+
+  95% {
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+
+  }
+
+
+  100% {
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    height: 0px;
+  }
+}
+
+
+@keyframes stan2 {
+  0% {
+    left: 600px;
+    top: -600px;
+    opacity: 0;
+  }
+
+
+  40% {
+    opacity: 0.7;
+  }
+
+
+  90% {
+    left: 0px;
+    top: 0px;
+    opacity: 0.3;
+
+  }
+
+  100% {
+    height: 0px;
+    opacity: 0;
+  }
+}
